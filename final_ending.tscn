@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://dynrouvl7tnwq"]
+
+[ext_resource type="Script" uid="uid://daoyxqnglh1gc" path="res://final_ending.gd" id="1_3wwte"]
+[ext_resource type="Texture2D" uid="uid://xnk8vitm6xt7" path="res://finalend.png" id="1_lbbmg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4xy7"]
+bg_color = Color(0.078431375, 0.043137256, 0.1882353, 0.8)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.78039217, 0.49019608, 1, 1)
+corner_radius_top_left = 26
+corner_radius_top_right = 26
+corner_radius_bottom_right = 26
+corner_radius_bottom_left = 26
+shadow_color = Color(0.4862745, 0.22745098, 0.92941177, 0.53333336)
+shadow_size = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbbmg"]
+bg_color = Color(0.078431375, 0.039215688, 0.14117648, 0.7490196)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.72156864, 0.42352942, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.35686275, 0.16862746, 0.5254902, 0.6666667)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_721py"]
+bg_color = Color(0.078431375, 0.039215688, 0.14117648, 0.7490196)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.72156864, 0.42352942, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.35686275, 0.16862746, 0.5254902, 0.6666667)
+shadow_size = 8
+
+[node name="FinalEnding" type="Control" unique_id=623413103]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3wwte")
+
+[node name="Background" type="TextureRect" parent="." unique_id=579013441]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lbbmg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MainPanel" type="Panel" parent="." unique_id=1407371370]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 324.0
+offset_right = 972.0
+offset_bottom = 441.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_d4xy7")
+
+[node name="TitleLabel" type="Label" parent="MainPanel" unique_id=2123565104]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -318.0
+offset_top = 5.0
+offset_right = 316.0
+offset_bottom = 107.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.972549, 1, 1)
+theme_override_colors/font_outline_color = Color(0.8509804, 0.65882355, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 54
+text = "YOU’RE BACK IN SYNC"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubtitlePanel" type="Panel" parent="." unique_id=2146543171]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 449.0
+offset_right = 873.0
+offset_bottom = 510.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lbbmg")
+
+[node name="SubtitleLabel" type="Label" parent="SubtitlePanel" unique_id=1046668541]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = -7.0
+offset_right = -19.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.91764706, 0.8509804, 1, 1)
+theme_override_colors/font_outline_color = Color(0.35686275, 0.16862746, 0.5254902, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 40
+text = "All rooms cleared"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="." unique_id=180613465]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 517.0
+offset_right = 736.0
+offset_bottom = 582.0
+theme_override_colors/font_color = Color(0.91764706, 0.8509804, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.35686275, 0.16862746, 0.5254902, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_721py")
+text = "BACK TO MAIN MENU"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

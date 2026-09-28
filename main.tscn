@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b5ubhhkqeadlm"]
+
+[ext_resource type="Script" uid="uid://5fpgj05bk7jb" path="res://main.gd" id="1_ig7tw"]
+
+[node name="Main" type="Node2D" unique_id=386077873]
+script = ExtResource("1_ig7tw")
+
+[node name="Label" type="Label" parent="." unique_id=1211493735]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Tracker Test 2"

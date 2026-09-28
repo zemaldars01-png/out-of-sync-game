@@ -1,0 +1,225 @@
+[gd_scene format=3 uid="uid://cl700qu0f7ah5"]
+
+[ext_resource type="Script" uid="uid://by17t5dpmsd8h" path="res://level2.gd" id="1_y0xe8"]
+[ext_resource type="Script" uid="uid://c4e6o5apii8it" path="res://player.gd" id="2_6q4t8"]
+[ext_resource type="Texture2D" uid="uid://dryrb4g7ynqp4" path="res://room2.png" id="2_8tcn8"]
+[ext_resource type="Texture2D" uid="uid://ct58jwnjoc4d3" path="res://key 1.png" id="3_8tcn8"]
+[ext_resource type="Texture2D" uid="uid://ry5a0f0bots" path="res://sparkle.png" id="5_r6vdu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d4xy7"]
+size = Vector2(101, 51)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_721py"]
+size = Vector2(56.1875, 60)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4xy7"]
+content_margin_left = 16.0
+content_margin_top = 10.0
+content_margin_right = 16.0
+content_margin_bottom = 10.0
+bg_color = Color(0.07058824, 0.039215688, 0.14117648, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.70980394, 0.29803923, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsjg6"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="LevelScene" type="Control" unique_id=805114072]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y0xe8")
+
+[node name="RoomBackground" type="TextureRect" parent="." unique_id=1329905431]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 10.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_8tcn8")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Timer" type="Timer" parent="." unique_id=528137226]
+autostart = true
+
+[node name="RestartButton" type="Button" parent="." unique_id=1295199197]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.22700001
+anchor_top = -0.22500001
+anchor_right = 1.225
+anchor_bottom = 1.2140001
+offset_left = 271.50403
+offset_top = 145.8
+offset_right = -1326.2001
+offset_bottom = -755.67206
+text = "RESTART
+"
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1024069714]
+script = ExtResource("2_6q4t8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1821563852]
+position = Vector2(556, 443.00003)
+scale = Vector2(0.25, 0.328)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=829410343]
+position = Vector2(192.5, 297.5)
+shape = SubResource("RectangleShape2D_d4xy7")
+
+[node name="ExitLabel" type="Label" parent="." unique_id=218398750]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 280.0
+offset_right = 254.0
+offset_bottom = 316.0
+theme_override_font_sizes/font_size = 20
+text = "LOCKED"
+
+[node name="Key1" type="Area2D" parent="." unique_id=549897550]
+
+[node name="Sprite2D" type="Sprite2D" parent="Key1" unique_id=4415640]
+position = Vector2(133.84373, 86.03125)
+scale = Vector2(0.038526732, 0.043012355)
+texture = ExtResource("3_8tcn8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Key1" unique_id=1254210752]
+position = Vector2(135.90625, 87)
+shape = SubResource("RectangleShape2D_721py")
+
+[node name="Key2" type="Area2D" parent="." unique_id=627674910]
+
+[node name="Sprite2D" type="Sprite2D" parent="Key2" unique_id=1022130717]
+position = Vector2(708.00006, 297.5)
+scale = Vector2(0.039872415, 0.04226475)
+texture = ExtResource("3_8tcn8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Key2" unique_id=226420659]
+position = Vector2(709.8125, 298)
+shape = SubResource("RectangleShape2D_721py")
+
+[node name="Key3" type="Area2D" parent="." unique_id=2035861247]
+
+[node name="Sprite2D" type="Sprite2D" parent="Key3" unique_id=305477564]
+position = Vector2(435.99997, 113)
+scale = Vector2(0.039274298, 0.04206536)
+texture = ExtResource("3_8tcn8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Key3" unique_id=1427007478]
+position = Vector2(433, 113)
+shape = SubResource("RectangleShape2D_721py")
+
+[node name="Key4" type="Area2D" parent="." unique_id=1456252617]
+position = Vector2(-3, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Key4" unique_id=763361621]
+position = Vector2(974.3125, 131.9375)
+scale = Vector2(0.029206572, 0.030203346)
+texture = ExtResource("3_8tcn8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Key4" unique_id=1338996770]
+position = Vector2(974.875, 133)
+shape = SubResource("RectangleShape2D_721py")
+
+[node name="Key5" type="Area2D" parent="." unique_id=790590288]
+position = Vector2(-3, 9)
+
+[node name="Sprite2D" type="Sprite2D" parent="Key5" unique_id=1454829923]
+position = Vector2(292.50003, 315.5)
+scale = Vector2(0.034290276, 0.035885166)
+texture = ExtResource("3_8tcn8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Key5" unique_id=855823837]
+position = Vector2(293, 315)
+shape = SubResource("RectangleShape2D_721py")
+
+[node name="HUDPanel" type="Panel" parent="." unique_id=1022139003]
+layout_mode = 0
+offset_left = 481.0
+offset_top = 14.0
+offset_right = 796.0
+offset_bottom = 155.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_d4xy7")
+
+[node name="LevelLabel" type="Label" parent="HUDPanel" unique_id=1430013113]
+layout_mode = 0
+offset_left = 33.0
+offset_top = -3.0
+offset_right = 293.0
+offset_bottom = 92.0
+theme_override_font_sizes/font_size = 30
+text = "LEVEL 1
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="KeyCounter" type="Label" parent="HUDPanel" unique_id=7626701]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 71.0
+offset_right = 378.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(0.49803922, 0.90588236, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "KEYS: 0/5"
+
+[node name="TimerLabel" type="Label" parent="HUDPanel" unique_id=817420614]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 36.0
+offset_top = 0.5
+offset_right = 149.0
+offset_bottom = 35.5
+theme_override_colors/font_color = Color(0.7882353, 0.7137255, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "TIME: 25"
+
+[node name="Sparkle1" type="Sprite2D" parent="HUDPanel" unique_id=719154187]
+position = Vector2(10.781221, 12.999985)
+scale = Vector2(0.08966309, 0.089912295)
+texture = ExtResource("5_r6vdu")
+
+[node name="Sparkle2" type="Sprite2D" parent="HUDPanel" unique_id=1153730643]
+position = Vector2(272.99997, 133)
+scale = Vector2(0.0621511, 0.060905084)
+texture = ExtResource("5_r6vdu")
+
+[node name="Sparkle4" type="Sprite2D" parent="HUDPanel" unique_id=1294628807]
+position = Vector2(312.2578, 121.95312)
+scale = Vector2(0.090497926, 0.081414476)
+texture = ExtResource("5_r6vdu")
+
+[node name="Sparkle3" type="Sprite2D" parent="HUDPanel" unique_id=642165256]
+position = Vector2(0, 43)
+scale = Vector2(0.059708897, 0.056419462)
+texture = ExtResource("5_r6vdu")
+
+[node name="DoorButton" type="Button" parent="." unique_id=1926899465]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 269.0
+offset_right = 249.0
+offset_bottom = 442.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jsjg6")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="DoorButton" to="." method="_on_door_button_pressed"]

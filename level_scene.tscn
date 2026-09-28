@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://m5pxpa5htlr1"]
+
+[ext_resource type="Script" uid="uid://b0glen4kkc62a" path="res://level_scene.gd" id="1_4quuv"]
+
+[node name="LevelScene" type="Control" unique_id=805114072]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4quuv")
+
+[node name="LevelLable" type="Label" parent="." unique_id=1430013113]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 40.0
+offset_right = 776.0
+offset_bottom = 177.0
+theme_override_font_sizes/font_size = 48
+text = "Level 1
+"
+horizontal_alignment = 1
+
+[node name="CLICK ME!" type="Button" parent="." unique_id=1987314337]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 280.0
+offset_right = 726.0
+offset_bottom = 380.0
+theme_override_font_sizes/font_size = 32
+text = "CLICK ME!
+"
+
+[node name="Timer" type="Timer" parent="." unique_id=528137226]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="RestartButton" type="Button" parent="." unique_id=1295199197]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "RESTART
+"
+
+[connection signal="pressed" from="CLICK ME!" to="." method="_on_click_me_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="RestartButton" to="." method="_on_restrat_button_pressed"]

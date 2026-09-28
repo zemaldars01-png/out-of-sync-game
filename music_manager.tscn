@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://co1o8vpiq77h5"]
+
+[ext_resource type="AudioStream" uid="uid://bma8o75q0bvjs" path="res://music2.mp3" id="1_tylfe"]
+
+[node name="MusicManager" type="Node2D" unique_id=203439533]
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=750829814]
+stream = ExtResource("1_tylfe")
+autoplay = true

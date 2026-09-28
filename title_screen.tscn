@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://btv1to7eqvcov"]
+
+[ext_resource type="Script" uid="uid://djsqu3byyro3v" path="res://title_screen.gd" id="1_ak2if"]
+[ext_resource type="Texture2D" uid="uid://1rj4exo6prob" path="res://out of sync.png" id="1_v6p8y"]
+[ext_resource type="Texture2D" uid="uid://b025dgt7wpeek" path="res://boy.png" id="3_05l2w"]
+[ext_resource type="FontFile" uid="uid://2qqcypu0ms2l" path="res://RubikGlitch-Regular.ttf" id="3_tpml5"]
+[ext_resource type="Texture2D" uid="uid://bgjvkim5u6m5y" path="res://girl.png" id="4_hafda"]
+[ext_resource type="AudioStream" uid="uid://bma8o75q0bvjs" path="res://music2.mp3" id="5_hafda"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_721py"]
+bg_color = Color(0.050980393, 0.02745098, 0.11764706, 0.8509804)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.7529412, 0.5176471, 0.9882353, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+shadow_color = Color(0.4862745, 0.22745098, 0.92941177, 0.6666667)
+shadow_size = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hafda"]
+bg_color = Color(0.078431375, 0.039215688, 0.14117648, 0.7058824)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.72156864, 0.42352942, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.35686275, 0.12941177, 0.7137255, 0.6666667)
+shadow_size = 12
+
+[node name="TitleScreen" type="Control" unique_id=1685420629]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_ak2if")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1033082995]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.998
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = 0.29595947
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_v6p8y")
+expand_mode = 1
+
+[node name="TitlePanel" type="Panel" parent="." unique_id=489090103]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 89.0
+offset_right = 1003.0
+offset_bottom = 244.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_721py")
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1308231849]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 112.0
+offset_right = 1085.0
+offset_bottom = 292.0
+theme_override_colors/default_color = Color(0.95686275, 0.91764706, 1, 1)
+theme_override_colors/font_outline_color = Color(0.35686275, 0.16862746, 0.5254902, 1)
+theme_override_colors/font_shadow_color = Color(0.14117648, 0, 0.27450982, 0.8)
+theme_override_constants/shadow_outline_size = 4
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("3_tpml5")
+theme_override_font_sizes/normal_font_size = 85
+text = "OUT OF SYNC"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="." unique_id=1696029107]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.024
+anchor_bottom = 0.068
+offset_left = 361.0
+offset_top = 395.0
+offset_right = 785.352
+offset_bottom = 452.936
+theme_override_colors/font_color = Color(0.95686275, 0.91764706, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.35686275, 0.16862746, 0.5254902, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_hafda")
+text = "START
+"
+
+[node name="Panel" type="Panel" parent="." unique_id=434376255]
+layout_mode = 0
+offset_left = 378.0
+offset_top = 305.0
+offset_right = 794.0
+offset_bottom = 377.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hafda")
+
+[node name="ChooseLabel" type="Label" parent="." unique_id=213284857]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48800004
+anchor_top = 0.37500003
+anchor_right = 0.49
+anchor_bottom = 0.37500003
+offset_left = -145.17603
+offset_top = 70.999985
+offset_right = 193.52002
+offset_bottom = 120.999985
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95686275, 0.91764706, 1, 1)
+theme_override_colors/font_outline_color = Color(0.35686275, 0.16862746, 0.5254902, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 26
+text = "CHOOSE YOUR CHARACTER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BoyButton" type="TextureButton" parent="ChooseLabel" unique_id=1583981054]
+layout_mode = 0
+offset_left = -260.0
+offset_top = -35.0
+offset_right = -40.0
+offset_bottom = 295.0
+texture_normal = ExtResource("3_05l2w")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="GirlButton" type="TextureButton" parent="ChooseLabel/BoyButton" unique_id=1243933417]
+layout_mode = 0
+offset_left = 653.0
+offset_top = 17.0
+offset_right = 873.0
+offset_bottom = 347.0
+texture_normal = ExtResource("4_hafda")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1585171109]
+stream = ExtResource("5_hafda")
+autoplay = true
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="ChooseLabel/BoyButton" to="." method="_on_boy_button_pressed"]
+[connection signal="pressed" from="ChooseLabel/BoyButton/GirlButton" to="." method="_on_girl_button_pressed"]

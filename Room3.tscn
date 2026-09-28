@@ -1,0 +1,210 @@
+[gd_scene format=3 uid="uid://b6hyvu67w4qr7"]
+
+[ext_resource type="Script" uid="uid://dg5u1sca88rqk" path="res://room_3.gd" id="1_8q7u4"]
+[ext_resource type="Texture2D" uid="uid://ckw3vn301le0h" path="res://room 3.png" id="1_lmtek"]
+[ext_resource type="Texture2D" uid="uid://b025dgt7wpeek" path="res://boy.png" id="2_6p6yb"]
+[ext_resource type="Script" uid="uid://c4e6o5apii8it" path="res://player.gd" id="2_lmtek"]
+[ext_resource type="Script" uid="uid://drvm0exifkx31" path="res://laser_move.gd" id="5_0oh0c"]
+[ext_resource type="Texture2D" uid="uid://cki1sndsfuav4" path="res://switch 1.png" id="6_d2g07"]
+[ext_resource type="Script" uid="uid://b1fww8qmneifh" path="res://switch.gd" id="6_l4j08"]
+[ext_resource type="Script" uid="uid://de5qhxrj3uuwo" path="res://exit_door.gd" id="7_l4j08"]
+[ext_resource type="Texture2D" uid="uid://cy5n0od4k4tgd" path="res://switch 2.png" id="8_5s0o0"]
+[ext_resource type="Texture2D" uid="uid://4xgdymy4vpxq" path="res://switch 3.png" id="9_8q7u4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6p6yb"]
+size = Vector2(50, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_721py"]
+size = Vector2(100, 177)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sg4ap"]
+size = Vector2(528, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0oh0c"]
+size = Vector2(12, 284)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tmf87"]
+size = Vector2(84.09088, 104)
+
+[node name="Room3" type="Node2D" unique_id=1088559633]
+script = ExtResource("1_8q7u4")
+
+[node name="RoomBackground" type="TextureRect" parent="." unique_id=1364671043]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -5.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lmtek")
+expand_mode = 1
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=400521482]
+position = Vector2(150, 540)
+script = ExtResource("2_lmtek")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=811340970]
+position = Vector2(0, -6.49996)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_6p6yb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1344094971]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_6p6yb")
+
+[node name="DoorStatus" type="Label" parent="." unique_id=1761533369]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 413.0
+offset_top = -5.0
+offset_right = 763.0
+offset_bottom = 132.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "LOCKED
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitPoint" type="Marker2D" parent="." unique_id=1804144207]
+position = Vector2(982, 330)
+
+[node name="ExitDoor" type="Area2D" parent="." unique_id=599861768]
+script = ExtResource("7_l4j08")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitDoor" unique_id=810920152]
+position = Vector2(1002, 329.5)
+shape = SubResource("RectangleShape2D_721py")
+
+[node name="ExitLabel" type="Label" parent="." unique_id=1481630790]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 923.0
+offset_top = 280.0
+offset_right = 1078.0
+offset_bottom = 339.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "EXIT
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Laser 1" type="Area2D" parent="." unique_id=1923566982]
+position = Vector2(601, 430)
+script = ExtResource("5_0oh0c")
+
+[node name="GlowLine" type="Line2D" parent="Laser 1" unique_id=1957315185]
+position = Vector2(638.26587, -513)
+scale = Vector2(7.71634, 1)
+points = PackedVector2Array(-114.466934, 584, -47.20707, 584)
+width = 12.0
+default_color = Color(1, 0, 0.29803923, 0.7019608)
+
+[node name="CoreLine" type="Line2D" parent="Laser 1/GlowLine" unique_id=1689426673]
+position = Vector2(256.79825, -6.9753594e-05)
+scale = Vector2(2.1063704, 1.1428429)
+points = PackedVector2Array(-176.19673, 509.2564, -144.26509, 511.88144)
+width = 4.0
+default_color = Color(1, 0, 0.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Laser 1" unique_id=2114230117]
+position = Vector2(14.75, 68.5)
+shape = SubResource("RectangleShape2D_sg4ap")
+
+[node name="Laser 2" type="Area2D" parent="." unique_id=44871841]
+position = Vector2(646, 386)
+script = ExtResource("5_0oh0c")
+
+[node name="GlowLine" type="Line2D" parent="Laser 2" unique_id=1346545071]
+position = Vector2(694, -532)
+scale = Vector2(8.526297, 1)
+points = PackedVector2Array(-117.51878, 462, -56.17914, 463)
+width = 12.0
+default_color = Color(1, 0, 0.29803923, 0.7019608)
+
+[node name="CoreLine" type="Line2D" parent="Laser 2/GlowLine" unique_id=1531783073]
+position = Vector2(265.55896, 378.26913)
+scale = Vector2(2.1677625, 0.26672393)
+points = PackedVector2Array(-176.87802, 306.42493, -148.58173, 313.92328)
+width = 4.0
+default_color = Color(1, 0, 0.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Laser 2" unique_id=867091810]
+position = Vector2(-47, -70)
+shape = SubResource("RectangleShape2D_sg4ap")
+
+[node name="Laser 3" type="Area2D" parent="." unique_id=1761413602]
+position = Vector2(601, 430)
+script = ExtResource("5_0oh0c")
+move_horizontally = false
+move_distance = 70.0
+move_speed = 1.5
+
+[node name="GlowLine" type="Line2D" parent="Laser 3" unique_id=6724990]
+position = Vector2(330, -49)
+points = PackedVector2Array(0, -120, -2, 157)
+width = 12.0
+default_color = Color(1, 0, 0.2, 0.5019608)
+
+[node name="CoreLine" type="Line2D" parent="Laser 3" unique_id=1341699239]
+position = Vector2(0, 79.32367)
+scale = Vector2(1, 14.149998)
+points = PackedVector2Array(330, -7.6907177)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Laser 3" unique_id=1628042675]
+position = Vector2(330, -28)
+shape = SubResource("RectangleShape2D_0oh0c")
+
+[node name="Switch1" type="Area2D" parent="." unique_id=987468525]
+script = ExtResource("6_l4j08")
+
+[node name="Sprite2D" type="Sprite2D" parent="Switch1" unique_id=1973314413]
+position = Vector2(272.00003, 383)
+scale = Vector2(0.123213746, 0.10845294)
+texture = ExtResource("6_d2g07")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch1" unique_id=1675011185]
+position = Vector2(271.00003, 383)
+scale = Vector2(0.968, 1)
+shape = SubResource("RectangleShape2D_tmf87")
+
+[node name="Switch2" type="Area2D" parent="." unique_id=1018758280]
+script = ExtResource("6_l4j08")
+
+[node name="Sprite2D" type="Sprite2D" parent="Switch2" unique_id=129722415]
+position = Vector2(575, 222.00003)
+scale = Vector2(0.123213746, 0.10606061)
+texture = ExtResource("8_5s0o0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch2" unique_id=923426746]
+position = Vector2(573, 224)
+scale = Vector2(0.968, 1)
+shape = SubResource("RectangleShape2D_tmf87")
+
+[node name="Switch3" type="Area2D" parent="." unique_id=237766903]
+script = ExtResource("6_l4j08")
+
+[node name="Sprite2D" type="Sprite2D" parent="Switch3" unique_id=1794719955]
+position = Vector2(850.00006, 115.25003)
+scale = Vector2(0.123213746, 0.10566193)
+texture = ExtResource("9_8q7u4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch3" unique_id=1547053558]
+position = Vector2(849, 114.00003)
+scale = Vector2(0.968, 1)
+shape = SubResource("RectangleShape2D_tmf87")
+
+[connection signal="body_entered" from="ExitDoor" to="." method="_on_exit_door_body_entered"]
+[connection signal="body_entered" from="ExitDoor" to="ExitDoor" method="_on_body_entered"]
