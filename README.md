@@ -1,4 +1,4 @@
-<img width="1146" height="645" alt="Screenshot 2026-10-14 at 4 05 17 PM" src="https://github.com/user-attachments/assets/fe487cbb-2ecf-46e9-a709-b85b4fded856" /><img width="1147" height="645" alt="Screenshot 2026-10-14 at 4 04 47 PM" src="https://github.com/user-attachments/assets/9676f40a-aac0-4e25-b7b1-4626182ccd16" />
+<img width="1147" height="645" alt="Screenshot 2026-10-14 at 4 04 47 PM" src="https://github.com/user-attachments/assets/a5fc164f-e707-4e80-a38f-1d460bed97a2" />
 # Out of Sync 🎮
 
 Out of Sync is my first game that I made using Godot. It's a small escape game where you have to collect items, avoid obstacles and complete challenges to get out of different rooms.
