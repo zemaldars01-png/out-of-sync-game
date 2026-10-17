@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://btv1to7eqvcov"]
 
 [ext_resource type="Script" uid="uid://djsqu3byyro3v" path="res://title_screen.gd" id="1_ak2if"]
-[ext_resource type="Texture2D" uid="uid://1rj4exo6prob" path="res://out of sync.png" id="1_v6p8y"]
-[ext_resource type="Texture2D" uid="uid://b025dgt7wpeek" path="res://boy.png" id="3_05l2w"]
+[ext_resource type="Texture2D" uid="uid://dwivipv103itg" path="res://backgroundcanva.png" id="2_tpml5"]
 [ext_resource type="FontFile" uid="uid://2qqcypu0ms2l" path="res://RubikGlitch-Regular.ttf" id="3_tpml5"]
-[ext_resource type="Texture2D" uid="uid://bgjvkim5u6m5y" path="res://girl.png" id="4_hafda"]
 [ext_resource type="AudioStream" uid="uid://bma8o75q0bvjs" path="res://music2.mp3" id="5_hafda"]
+[ext_resource type="Texture2D" uid="uid://bhk88bhii4b28" path="res://girlcanva.png" id="5_jqemp"]
+[ext_resource type="Texture2D" uid="uid://3eaqf2nwudc3" path="res://boycanva.png" id="6_013yr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_721py"]
 bg_color = Color(0.050980393, 0.02745098, 0.11764706, 0.8509804)
@@ -37,24 +37,31 @@ shadow_size = 12
 
 [node name="TitleScreen" type="Control" unique_id=1685420629]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_ak2if")
+
+[node name="VideoBackground" type="VideoStreamPlayer" parent="." unique_id=1856991642]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 40.0
+offset_bottom = 39.0
 
 [node name="Background" type="TextureRect" parent="." unique_id=1033082995]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.998
-offset_left = 1.0
 offset_top = -1.0
 offset_right = 1.0
 offset_bottom = 0.29595947
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("1_v6p8y")
+texture = ExtResource("2_tpml5")
 expand_mode = 1
 
 [node name="TitlePanel" type="Panel" parent="." unique_id=489090103]
@@ -133,26 +140,34 @@ vertical_alignment = 1
 [node name="BoyButton" type="TextureButton" parent="ChooseLabel" unique_id=1583981054]
 layout_mode = 0
 offset_left = -260.0
-offset_top = -35.0
+offset_top = -42.0
 offset_right = -40.0
-offset_bottom = 295.0
-texture_normal = ExtResource("3_05l2w")
+offset_bottom = 331.0
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="GirlButton" type="TextureButton" parent="ChooseLabel/BoyButton" unique_id=1243933417]
 layout_mode = 0
 offset_left = 653.0
-offset_top = 17.0
+offset_top = -1.0
 offset_right = 873.0
-offset_bottom = 347.0
-texture_normal = ExtResource("4_hafda")
+offset_bottom = 361.0
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1585171109]
 stream = ExtResource("5_hafda")
 autoplay = true
+
+[node name="GirlSprite" type="Sprite2D" parent="." unique_id=1970519840]
+position = Vector2(910.00006, 458.00003)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_jqemp")
+
+[node name="BoySprite" type="Sprite2D" parent="." unique_id=496357258]
+position = Vector2(247.04001, 451.72003)
+scale = Vector2(0.25, 0.23734373)
+texture = ExtResource("6_013yr")
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="ChooseLabel/BoyButton" to="." method="_on_boy_button_pressed"]
