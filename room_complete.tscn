@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://dji7tl18c00q8"]
 
 [ext_resource type="Script" uid="uid://dkcq0bl3sggej" path="res://room_complete.gd" id="1_kem6s"]
-[ext_resource type="Texture2D" uid="uid://dw1mgu1mgw8em" path="res://continue.png" id="2_o2cua"]
-[ext_resource type="Texture2D" uid="uid://ry5a0f0bots" path="res://sparkle.png" id="3_p7mak"]
+[ext_resource type="Texture2D" uid="uid://dwivipv103itg" path="res://backgroundcanva.png" id="2_p7mak"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4xy7"]
 bg_color = Color(0.02745098, 0.02745098, 0.08627451, 0.9098039)
@@ -90,7 +89,7 @@ offset_right = -3.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_o2cua")
+texture = ExtResource("2_p7mak")
 expand_mode = 1
 stretch_mode = 5
 
@@ -151,7 +150,6 @@ offset_top = -30.0
 offset_right = 357.0
 offset_bottom = 55.0
 mouse_filter = 2
-texture = ExtResource("3_p7mak")
 expand_mode = 1
 stretch_mode = 5
 
@@ -162,7 +160,6 @@ offset_top = 66.0
 offset_right = 65.0
 offset_bottom = 147.0
 mouse_filter = 2
-texture = ExtResource("3_p7mak")
 expand_mode = 1
 stretch_mode = 5
 
@@ -173,7 +170,6 @@ offset_top = -2.0
 offset_right = 378.0
 offset_bottom = 97.0
 mouse_filter = 2
-texture = ExtResource("3_p7mak")
 expand_mode = 1
 stretch_mode = 5
 
@@ -184,7 +180,6 @@ offset_top = 17.0
 offset_right = 57.0
 offset_bottom = 145.0
 mouse_filter = 2
-texture = ExtResource("3_p7mak")
 expand_mode = 1
 stretch_mode = 5
 
