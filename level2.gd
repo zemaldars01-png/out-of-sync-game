@@ -2,7 +2,7 @@ extends Control
 
 var keys_collected: int = 0
 var total_keys: int = 5
-var time_left: int = 25
+var time_left: int = 15
 
 var level_finished: bool = false
 var door_ready: bool = false
@@ -17,7 +17,7 @@ func _ready() -> void:
 	# =========================
 	$HUDPanel/LevelLabel.text = "LEVEL 1"
 	$HUDPanel/KeyCounter.text = "KEYS: 0/5"
-	$HUDPanel/TimerLabel.text = "TIME: 25"
+	$HUDPanel/TimerLabel.text = "TIME: 15"
 
 	# =========================
 	# PLAYER
@@ -37,11 +37,11 @@ func _ready() -> void:
 
 	# Character image + size
 	if CharacterData.selected_character == "boy":
-		sprite.texture = load("res://boy.png")
+		sprite.texture = load("res://boycanva.png")
 		sprite.scale = Vector2(0.18, 0.18)
 	else:
-		sprite.texture = load("res://girl.png")
-		sprite.scale = Vector2(0.13, 0.13)
+		sprite.texture = load("res://girlcanva.png")
+		sprite.scale = Vector2(0.18, 0.18)
 
 	# =========================
 	# DOOR START STATE
