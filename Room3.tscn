@@ -1,30 +1,33 @@
 [gd_scene format=3 uid="uid://b6hyvu67w4qr7"]
 
 [ext_resource type="Script" uid="uid://dg5u1sca88rqk" path="res://room_3.gd" id="1_8q7u4"]
-[ext_resource type="Texture2D" uid="uid://ckw3vn301le0h" path="res://room 3.png" id="1_lmtek"]
-[ext_resource type="Texture2D" uid="uid://b025dgt7wpeek" path="res://boy.png" id="2_6p6yb"]
+[ext_resource type="Texture2D" uid="uid://cqkjfr0t7mavl" path="res://level1.jpeg" id="2_d2g07"]
 [ext_resource type="Script" uid="uid://c4e6o5apii8it" path="res://player.gd" id="2_lmtek"]
+[ext_resource type="Texture2D" uid="uid://bhk88bhii4b28" path="res://girlcanva.png" id="4_8q7u4"]
 [ext_resource type="Script" uid="uid://drvm0exifkx31" path="res://laser_move.gd" id="5_0oh0c"]
-[ext_resource type="Texture2D" uid="uid://cki1sndsfuav4" path="res://switch 1.png" id="6_d2g07"]
 [ext_resource type="Script" uid="uid://b1fww8qmneifh" path="res://switch.gd" id="6_l4j08"]
 [ext_resource type="Script" uid="uid://de5qhxrj3uuwo" path="res://exit_door.gd" id="7_l4j08"]
-[ext_resource type="Texture2D" uid="uid://cy5n0od4k4tgd" path="res://switch 2.png" id="8_5s0o0"]
-[ext_resource type="Texture2D" uid="uid://4xgdymy4vpxq" path="res://switch 3.png" id="9_8q7u4"]
+[ext_resource type="Texture2D" uid="uid://dnr5xtrjnm4qi" path="res://switch1.png" id="7_yujh6"]
+[ext_resource type="Texture2D" uid="uid://dci55sweopvkk" path="res://switch2.png" id="8_5s0o0"]
+[ext_resource type="Texture2D" uid="uid://bsknd212x0xnj" path="res://switch3.png" id="9_8q7u4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6p6yb"]
-size = Vector2(50, 90)
+size = Vector2(89, 156)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_721py"]
-size = Vector2(100, 177)
+size = Vector2(129, 220)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sg4ap"]
-size = Vector2(528, 19)
+size = Vector2(532, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d4xy7"]
+size = Vector2(16.999954, 171.00006)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0oh0c"]
 size = Vector2(12, 284)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tmf87"]
-size = Vector2(84.09088, 104)
+size = Vector2(159.60742, 84.5)
 
 [node name="Room3" type="Node2D" unique_id=1088559633]
 script = ExtResource("1_8q7u4")
@@ -39,7 +42,7 @@ offset_right = 1152.0
 offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_lmtek")
+texture = ExtResource("2_d2g07")
 expand_mode = 1
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=400521482]
@@ -47,12 +50,12 @@ position = Vector2(150, 540)
 script = ExtResource("2_lmtek")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=811340970]
-position = Vector2(0, -6.49996)
+position = Vector2(0, -23.95499)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_6p6yb")
+texture = ExtResource("4_8q7u4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1344094971]
-position = Vector2(0, 10)
+position = Vector2(-1.5, -23)
 shape = SubResource("RectangleShape2D_6p6yb")
 
 [node name="DoorStatus" type="Label" parent="." unique_id=1761533369]
@@ -61,13 +64,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 413.0
-offset_top = -5.0
-offset_right = 763.0
-offset_bottom = 132.0
+offset_left = 856.0
+offset_top = 153.0
+offset_right = 1042.0
+offset_bottom = 266.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 25
 text = "LOCKED
 "
 horizontal_alignment = 1
@@ -80,7 +83,7 @@ position = Vector2(982, 330)
 script = ExtResource("7_l4j08")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitDoor" unique_id=810920152]
-position = Vector2(1002, 329.5)
+position = Vector2(947.5, 266)
 shape = SubResource("RectangleShape2D_721py")
 
 [node name="ExitLabel" type="Label" parent="." unique_id=1481630790]
@@ -89,10 +92,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 923.0
-offset_top = 280.0
-offset_right = 1078.0
-offset_bottom = 339.0
+offset_left = 871.0
+offset_top = 118.0
+offset_right = 1026.0
+offset_bottom = 177.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 20
@@ -102,7 +105,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Laser 1" type="Area2D" parent="." unique_id=1923566982]
-position = Vector2(601, 430)
+position = Vector2(547, 455)
 script = ExtResource("5_0oh0c")
 
 [node name="GlowLine" type="Line2D" parent="Laser 1" unique_id=1957315185]
@@ -123,13 +126,36 @@ default_color = Color(1, 0, 0.2, 1)
 position = Vector2(14.75, 68.5)
 shape = SubResource("RectangleShape2D_sg4ap")
 
+[node name="Laser 4" type="Area2D" parent="." unique_id=558313367]
+position = Vector2(595, 455)
+script = ExtResource("5_0oh0c")
+
+[node name="GlowLine" type="Line2D" parent="Laser 4" unique_id=638888540]
+position = Vector2(-156.3659, -457.44196)
+scale = Vector2(1.2728709, 0.58815753)
+points = PackedVector2Array(-124.85541, 70.362015, -124.85541, 67.32489, -124.85541, 68.84345, -124.84929, 71.04692, -124.056984, 356)
+width = 12.0
+default_color = Color(1, 0, 0.29803923, 0.7019608)
+
+[node name="CoreLine" type="Line2D" parent="Laser 4/GlowLine" unique_id=1767762081]
+position = Vector2(-28.664013, -217.96684)
+scale = Vector2(0.5208984, 0.911051)
+points = PackedVector2Array(-185.73416, 316.58765, -185.73416, 628.24695)
+width = 4.0
+default_color = Color(1, 0, 0.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Laser 4/GlowLine" unique_id=658381010]
+position = Vector2(-124.23422, 212.42953)
+scale = Vector2(0.78562623, 1.7002252)
+shape = SubResource("RectangleShape2D_d4xy7")
+
 [node name="Laser 2" type="Area2D" parent="." unique_id=44871841]
-position = Vector2(646, 386)
+position = Vector2(604, 403)
 script = ExtResource("5_0oh0c")
 
 [node name="GlowLine" type="Line2D" parent="Laser 2" unique_id=1346545071]
-position = Vector2(694, -532)
-scale = Vector2(8.526297, 1)
+position = Vector2(694.3544, -532)
+scale = Vector2(8.534317, 1)
 points = PackedVector2Array(-117.51878, 462, -56.17914, 463)
 width = 12.0
 default_color = Color(1, 0, 0.29803923, 0.7019608)
@@ -146,11 +172,11 @@ position = Vector2(-47, -70)
 shape = SubResource("RectangleShape2D_sg4ap")
 
 [node name="Laser 3" type="Area2D" parent="." unique_id=1761413602]
-position = Vector2(601, 430)
+position = Vector2(515, 443)
 script = ExtResource("5_0oh0c")
 move_horizontally = false
-move_distance = 70.0
-move_speed = 1.5
+move_distance = 100.0
+move_speed = 4.0
 
 [node name="GlowLine" type="Line2D" parent="Laser 3" unique_id=6724990]
 position = Vector2(330, -49)
@@ -169,14 +195,15 @@ shape = SubResource("RectangleShape2D_0oh0c")
 
 [node name="Switch1" type="Area2D" parent="." unique_id=987468525]
 script = ExtResource("6_l4j08")
+target_laser_name = "Laser 2"
 
 [node name="Sprite2D" type="Sprite2D" parent="Switch1" unique_id=1973314413]
-position = Vector2(272.00003, 383)
+position = Vector2(566, 433.00003)
 scale = Vector2(0.123213746, 0.10845294)
-texture = ExtResource("6_d2g07")
+texture = ExtResource("7_yujh6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Switch1" unique_id=1675011185]
-position = Vector2(271.00003, 383)
+position = Vector2(563, 431)
 scale = Vector2(0.968, 1)
 shape = SubResource("RectangleShape2D_tmf87")
 
@@ -184,12 +211,12 @@ shape = SubResource("RectangleShape2D_tmf87")
 script = ExtResource("6_l4j08")
 
 [node name="Sprite2D" type="Sprite2D" parent="Switch2" unique_id=129722415]
-position = Vector2(575, 222.00003)
+position = Vector2(173.00009, 85.00003)
 scale = Vector2(0.123213746, 0.10606061)
 texture = ExtResource("8_5s0o0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Switch2" unique_id=923426746]
-position = Vector2(573, 224)
+position = Vector2(175, 85.00001)
 scale = Vector2(0.968, 1)
 shape = SubResource("RectangleShape2D_tmf87")
 
@@ -197,12 +224,12 @@ shape = SubResource("RectangleShape2D_tmf87")
 script = ExtResource("6_l4j08")
 
 [node name="Sprite2D" type="Sprite2D" parent="Switch3" unique_id=1794719955]
-position = Vector2(850.00006, 115.25003)
+position = Vector2(1059, 492.99997)
 scale = Vector2(0.123213746, 0.10566193)
 texture = ExtResource("9_8q7u4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Switch3" unique_id=1547053558]
-position = Vector2(849, 114.00003)
+position = Vector2(1059.0001, 495)
 scale = Vector2(0.968, 1)
 shape = SubResource("RectangleShape2D_tmf87")
 
