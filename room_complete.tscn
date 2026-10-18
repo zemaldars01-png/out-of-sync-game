@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dji7tl18c00q8"]
 
 [ext_resource type="Script" uid="uid://dkcq0bl3sggej" path="res://room_complete.gd" id="1_kem6s"]
-[ext_resource type="Texture2D" uid="uid://dwivipv103itg" path="res://backgroundcanva.png" id="2_p7mak"]
+[ext_resource type="Texture2D" uid="uid://dwivipv103itg" path="res://backgroundcanva.png" id="2_o2cua"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4xy7"]
 bg_color = Color(0.02745098, 0.02745098, 0.08627451, 0.9098039)
@@ -89,7 +89,7 @@ offset_right = -3.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_p7mak")
+texture = ExtResource("2_o2cua")
 expand_mode = 1
 stretch_mode = 5
 
@@ -142,46 +142,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_o2cua")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_p7mak")
 theme_override_styles/hover = SubResource("StyleBoxFlat_p0l3f")
 text = "CONTINUE"
-
-[node name="Sparkle" type="TextureRect" parent="ContinueButton" unique_id=796975953]
-layout_mode = 0
-offset_left = 224.0
-offset_top = -30.0
-offset_right = 357.0
-offset_bottom = 55.0
-mouse_filter = 2
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Sparkle2" type="TextureRect" parent="ContinueButton" unique_id=168846828]
-layout_mode = 0
-offset_left = -15.0
-offset_top = 66.0
-offset_right = 65.0
-offset_bottom = 147.0
-mouse_filter = 2
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Sparkle3" type="TextureRect" parent="ContinueButton" unique_id=1439547700]
-layout_mode = 0
-offset_left = 235.0
-offset_top = -2.0
-offset_right = 378.0
-offset_bottom = 97.0
-mouse_filter = 2
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Sparkle4" type="TextureRect" parent="ContinueButton" unique_id=501380003]
-layout_mode = 0
-offset_left = -55.0
-offset_top = 17.0
-offset_right = 57.0
-offset_bottom = 145.0
-mouse_filter = 2
-expand_mode = 1
-stretch_mode = 5
 
 [connection signal="mouse_entered" from="ContinueButton" to="." method="_on_continue_button_mouse_entered"]
 [connection signal="mouse_exited" from="ContinueButton" to="." method="_on_continue_button_mouse_exited"]

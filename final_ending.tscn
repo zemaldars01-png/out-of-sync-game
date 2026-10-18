@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dynrouvl7tnwq"]
 
 [ext_resource type="Script" uid="uid://daoyxqnglh1gc" path="res://final_ending.gd" id="1_3wwte"]
-[ext_resource type="VideoStream" uid="uid://c1mipw1n0oqk5" path="res://videocanva_fixed.ogv" id="2_3wwte"]
-[ext_resource type="Texture2D" uid="uid://dwivipv103itg" path="res://backgroundcanva.png" id="3_sk06b"]
+[ext_resource type="Texture2D" uid="uid://xnk8vitm6xt7" path="res://finalend.png" id="1_lbbmg"]
+[ext_resource type="VideoStream" uid="uid://c1mipw1n0oqk5" path="res://videocanva_fixed.ogv" id="2_sk06b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4xy7"]
 bg_color = Color(0.078431375, 0.043137256, 0.1882353, 0.8)
@@ -55,14 +55,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3wwte")
 
-[node name="BackgroundVideo" type="VideoStreamPlayer" parent="." unique_id=397921777]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=255699785]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("2_3wwte")
+stream = ExtResource("2_sk06b")
 autoplay = true
 expand = true
 loop = true
@@ -75,7 +75,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_sk06b")
+texture = ExtResource("1_lbbmg")
 expand_mode = 1
 stretch_mode = 6
 
