@@ -1,51 +1,164 @@
 # ---Out of Sync---
 
-Hi, This is a small game I made in Godot for Hack Club Stardance. It is my first game in Godot. I wanted to try making an escape game where you have to complete some tasks to get out of rooms.
-There are only 2 levels for now.
+Hello there, whoever is reading this..
 
-Play it here: https://zemal-dars.itch.io/out-of-sync
+Welcome to Out of Sync.
 
----
+A game I made using Godot for Hack Club Stardance.
 
-## how to play
-You can choose between a boy and girl character when you start.
-### level 1 - keys
-You have to collect 5 keys before the timer runs out. When you get all the keys the door opens and you can move to the next level.
+Now before you start, I should probably tell you that this is my first time making a game in Godot.
+
+So if you find something weird...well, I tried.
+
+Anyways,
+
+The game is about escaping rooms. Sounds easy right?
+
+Well, maybe the first room is.
+
+The second one...not so much.
+
+There are 2 levels in total because making even these 2 took me quite some time.
+
+Play it here - https://zemal-dars.itch.io/out-of-sync
+
+# YOUR MISSION -
+
+You are stuck in a room.
+
+Why? I don't know, you're just there.
+
+Your job is to get out.
+
+But obviously the door isn't just going to open for you.
+
+### LEVEL 1 - The Keys
+
+You have to collect 5 keys before the timer runs out.
+
+Yes, FIVE.
+
+Once you get all of them, the door opens and you can finally leave.
+
+Except you're not actually free yet.
+
+Because there's another room waiting for you.
 
 <img width="1146" height="645" alt="Level 1" src="https://github.com/user-attachments/assets/bf852587-cbdb-4859-b494-099f2ff287cb" />
 
-### level 2 - lasers
-This room has lasers and 3 switches. You have to avoid the lasers and activate all the switches to open the exit. I think this level was harder than the first one, mostly because of the lasers.
+### LEVEL 2 - The Laser Room
+
+Now this is where things get a little annoying.
+
+There are lasers.
+
+And 3 switches.
+
+You have to activate all 3 switches without getting hit by the lasers.
+
+Once you do that, the exit opens.
+
+Congratulations, you escaped.
+
+(if you actually managed to)
 
 <img width="1144" height="643" alt="Level 2" src="https://github.com/user-attachments/assets/72092887-f5f4-4c57-aa73-1ed1e1176070" />
 
----
+# Oh wait, the main menu
 
-## starting screen
-This is the main menu. You can start the game and choose your character.
+Almost forgot.
+
+You can choose between a boy and girl character before starting.
+
+Here's what the menu looks like.
 
 <img width="1147" height="645" alt="Main Menu" src="https://github.com/user-attachments/assets/a5fc164f-e707-4e80-a38f-1d460bed97a2" />
 
-## making the game
+# HOW DID I MAKE THIS??
 
-I used Godot and GDScript for the game. First I worked on the main menu and character movement. After that I started adding keys and a timer to the first level. I did not know much about Godot when I started so I had to figure out how scenes and stuff work. Then I made the second room with lasers. The lasers were actually quite annoying to make. The vertical one was giving me problems with collision and I had to change things a few times. Another problem was the timer, it was showing two numbers for some reason. The restart button also wasn't working properly at first. I kept running the game to check if everything was working. Sometimes I would fix something and then find another bug. Also I changed the backgrounds a few times because I didn't really like how they looked before.
+Good question.
 
-## stuff i used
+Godot.
 
-- Godot - for making the game
-- GDScript - for the code
+And GDScript.
+
+That's basically what I used.
+
+At first I was just trying to figure out how to move a character around.
+
+Then I made the menu, added the keys, timer and stuff.
+
+I thought the first level was going pretty well.
+
+Until the timer decided to show TWO different numbers on the screen.
+
+No idea why it wanted to do that.
+
+But I fixed it eventually.
+
+Then came level 2.
+
+Oh boy.
+
+The lasers were probably the most annoying part of this whole project.
+
+Especially the vertical one because the collision wasn't working properly.
+
+I also had to fix the restart button a few times.
+
+And then I changed the backgrounds because I didn't like how they looked.
+
+Basically a lot of fixing things.
+
+But at least the game works now.
+
+# STUFF I USED -
+
+- Godot - to make the game
+- GDScript - for coding
 - Canva - for some backgrounds and images
-- Some tutorials when I didn't understand something
+- Tutorials - because I was confused sometimes
 
-I also added some music to the game.
+Also added music because playing in complete silence felt a little boring.
 
----
+# WHY DID I MAKE THIS GAME?
 
-## what i learned
+Well..
 
-Before making this I had never really made a game in Godot. I learned about scenes, collisions, signals and how to change levels. I also learned that even a small game can take quite a lot of time to make. Especially when things don't work and you don't know why.
+I wanted to try game development.
 
-## That's it
+And Hack Club Stardance seemed like a good reason to actually finish something.
 
-This was my first game so it's not perfect. I spent quite a lot of time fixing bugs, especially in level 2. But I was happy when I finally finished it and could play both levels. I might add more levels later but for now that's all.
+I had never made a proper game in Godot before this.
 
+So I thought why not.
+
+Was it easy?
+
+No.
+
+Did I spend way too much time fixing small things?
+
+Yes.
+
+But I learned how scenes work, collisions, signals, moving characters and switching levels.
+
+I still have a lot to learn though.
+
+# ANYWAYS...
+
+That's pretty much it.
+
+I might add more levels later.
+
+Or maybe I'll make another game.
+
+Who knows.
+
+For now, go try escaping those rooms.
+
+And please don't blame me if the lasers get you.
+
+Goodluck.
+
+Made for Hack Club Stardance.
