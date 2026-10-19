@@ -1,6 +1,6 @@
 # ---Out of Sync---
 
-This is a small game I made in Godot for Hack Club Stardance. It's my first game in Godot. I wanted to try making an escape game where you have to complete some tasks to get out of rooms.
+Hi, This is a small game I made in Godot for Hack Club Stardance. It is my first game in Godot. I wanted to try making an escape game where you have to complete some tasks to get out of rooms.
 There are only 2 levels for now.
 
 Play it here: https://zemal-dars.itch.io/out-of-sync
@@ -28,7 +28,7 @@ This is the main menu. You can start the game and choose your character.
 
 ## making the game
 
-I used Godot and GDScript for the game. First I worked on the main menu and character movement. After that I started adding keys and a timer to the first level. I didn't know much about Godot when I started so I had to figure out how scenes and stuff work. Then I made the second room with lasers. The lasers were actually quite annoying to make. The vertical one was giving me problems with collision and I had to change things a few times. Another problem was the timer, it was showing two numbers for some reason. The restart button also wasn't working properly at first. I kept running the game to check if everything was working. Sometimes I would fix something and then find another bug. Also I changed the backgrounds a few times because I didn't really like how they looked before.
+I used Godot and GDScript for the game. First I worked on the main menu and character movement. After that I started adding keys and a timer to the first level. I did not know much about Godot when I started so I had to figure out how scenes and stuff work. Then I made the second room with lasers. The lasers were actually quite annoying to make. The vertical one was giving me problems with collision and I had to change things a few times. Another problem was the timer, it was showing two numbers for some reason. The restart button also wasn't working properly at first. I kept running the game to check if everything was working. Sometimes I would fix something and then find another bug. Also I changed the backgrounds a few times because I didn't really like how they looked before.
 
 ## Stuff I used
 
