@@ -2,6 +2,7 @@
 
 This is a small game I made in Godot for Hack Club Stardance. It's my first game in Godot. I wanted to try making an escape game where you have to complete some tasks to get out of rooms.
 There are only 2 levels for now.
+
 Play it here: https://zemal-dars.itch.io/out-of-sync
 
 ---
@@ -10,9 +11,12 @@ Play it here: https://zemal-dars.itch.io/out-of-sync
 You can choose between a boy and girl character when you start.
 ### level 1 - keys
 You have to collect 5 keys before the timer runs out. When you get all the keys the door opens and you can move to the next level.
+
 <img width="1146" height="645" alt="Level 1" src="https://github.com/user-attachments/assets/bf852587-cbdb-4859-b494-099f2ff287cb" />
+
 ### Level 2 - lasers
 This room has lasers and 3 switches. You have to avoid the lasers and activate all the switches to open the exit. I think this level was harder than the first one, mostly because of the lasers.
+
 <img width="1144" height="643" alt="Level 2" src="https://github.com/user-attachments/assets/72092887-f5f4-4c57-aa73-1ed1e1176070" />
 
 ---
